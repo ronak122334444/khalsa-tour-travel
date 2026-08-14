@@ -12,50 +12,144 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+/* =========================================================
+   WEBSITE URL
+========================================================= */
+
+const siteUrl = "https://khalsa-tour-travel-tufc.vercel.app";
+
+/* =========================================================
+   SEO METADATA
+========================================================= */
+
 export const metadata: Metadata = {
-  title: "Khalsa Tour & Travel | Cab Service in Amritsar",
+  metadataBase: new URL(siteUrl),
+
+  title: {
+    default: "Khalsa Tour & Travel | Cab Service in Amritsar",
+    template: "%s | Khalsa Tour & Travel",
+  },
+
   description:
-    "Khalsa Tour & Travel provides reliable cab services from Amritsar to destinations across India. Book premium cabs, Ertiga 7-seater and Tempo Traveller services.",
+    "Khalsa Tour & Travel provides reliable cab services in Amritsar and across India. Book premium cabs, Ertiga 7-seater and Tempo Traveller services for local, airport and outstation travel.",
+
   keywords: [
     "Khalsa Tour & Travel",
     "cab service in Amritsar",
     "Amritsar cab service",
+    "taxi service in Amritsar",
+    "Amritsar taxi service",
     "Amritsar to Delhi cab",
     "Amritsar to Ludhiana cab",
-    "outstation cab service",
-    "airport cab service Amritsar",
-    "Ertiga cab service",
+    "Amritsar to Chandigarh cab",
+    "Amritsar to Jalandhar cab",
+    "Amritsar to Pathankot cab",
+    "Amritsar airport cab",
+    "airport taxi Amritsar",
+    "outstation cab service Amritsar",
+    "outstation taxi Amritsar",
     "Tempo Traveller Amritsar",
+    "Tempo Traveller Punjab",
+    "Ertiga cab Amritsar",
+    "7 seater cab Amritsar",
     "Punjab cab service",
+    "All India cab service",
+    "cab booking Amritsar",
+    "taxi booking Amritsar",
   ],
+
   authors: [
     {
       name: "Khalsa Tour & Travel",
     },
   ],
+
   creator: "Khalsa Tour & Travel",
+  publisher: "Khalsa Tour & Travel",
+
+  applicationName: "Khalsa Tour & Travel",
+
+  category: "travel",
+
+  alternates: {
+    canonical: "/",
+  },
+
+  /* =========================================================
+     OPEN GRAPH
+  ========================================================= */
 
   openGraph: {
     title: "Khalsa Tour & Travel | Cab Service in Amritsar",
+
     description:
-      "Reliable cab and travel services from Amritsar to destinations across India.",
-    type: "website",
-    locale: "en_IN",
+      "Book reliable cabs, Ertiga 7-seater and Tempo Traveller services from Amritsar to destinations across India.",
+
+    url: siteUrl,
+
     siteName: "Khalsa Tour & Travel",
+
+    locale: "en_IN",
+
+    type: "website",
+
+    images: [
+      {
+        url: "/images/logo.png",
+        width: 512,
+        height: 512,
+        alt: "Khalsa Tour & Travel - Cab Service in Amritsar",
+      },
+    ],
   },
+
+  /* =========================================================
+     TWITTER
+  ========================================================= */
 
   twitter: {
     card: "summary_large_image",
+
     title: "Khalsa Tour & Travel | Cab Service in Amritsar",
+
     description:
-      "Book reliable cabs, Ertiga and Tempo Traveller services from Amritsar to destinations across India.",
+      "Reliable cab and travel services from Amritsar to destinations across India.",
+
+    images: ["/images/logo.png"],
   },
+
+  /* =========================================================
+     ROBOTS
+  ========================================================= */
 
   robots: {
     index: true,
     follow: true,
+
+    googleBot: {
+      index: true,
+      follow: true,
+
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
+
+  /* =========================================================
+     ICONS
+  ========================================================= */
+
+  icons: {
+    icon: "/images/logo.png",
+    shortcut: "/images/logo.png",
+    apple: "/images/logo.png",
   },
 };
+
+/* =========================================================
+   ROOT LAYOUT
+========================================================= */
 
 export default function RootLayout({
   children,
@@ -64,7 +158,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
+      lang="en-IN"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
