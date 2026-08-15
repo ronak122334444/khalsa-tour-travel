@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
    WEBSITE URL
 ========================================================= */
 
-const siteUrl = "https://khalsa-tour-travel-tufc.vercel.app";
+const siteUrl = "https://khalsa-tour-travel-hzkx.vercel.app";
 
 /* =========================================================
    SEO METADATA
@@ -24,6 +24,14 @@ const siteUrl = "https://khalsa-tour-travel-tufc.vercel.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
+
+  /* =========================================================
+     GOOGLE SEARCH CONSOLE VERIFICATION
+  ========================================================= */
+
+  verification: {
+    google: "_79nYx5E96pvambAJd4UO8OFkid9X2zgxJ_6CHx8HcQ",
+  },
 
   title: {
     default: "Khalsa Tour & Travel | Cab Service in Amritsar",
